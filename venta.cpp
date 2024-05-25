@@ -5,7 +5,7 @@
 #include <cstdlib>
 using namespace std;
 
-venta::venta(cliente* _comprador):comprador(_comprador){
+venta::venta(cliente& _comprador):comprador(_comprador){
     this->id=rand()% 1000+1;
 }
 int venta::getId(){

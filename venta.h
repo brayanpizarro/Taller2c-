@@ -8,10 +8,10 @@
 class venta{
     private:
     int id;
-    cliente* comprador;
+    cliente& comprador;
     queue<producto> compras;
     public:
-    venta(cliente* _comprador);
+    venta(cliente& _comprador);
     int getId();
     int getTotal();
     void insertarProducto(producto& p);
