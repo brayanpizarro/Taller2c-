@@ -11,14 +11,10 @@ class cliente{
     bool embarazo;
     bool discapacidad;
     public:
-    cliente(string _nombre,string _rut,bool _embarazo,bool _discapacidad);
+    cliente(string _nombre,string _rut);
     string getNombre();
     string getRut();
-    bool getEmbarazo();
-    bool getDiscapacidad();
     void setNombre(string _nombre);
     void setRut(string _rut);
-    void setEmbarazo(bool _embarazo);
-    void setDiscapacidad(bool _discapacidad);
     ~cliente();
 };
