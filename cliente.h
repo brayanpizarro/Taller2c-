@@ -1,20 +1,17 @@
 #pragma once
-#include <iostream>
 #include <string>
 using namespace std;
-
-class cliente{
-    private:
+class Cliente {
+private:
+    int codigo;
     string nombre;
-    string rut;
-    int edad;
-    bool embarazo;
-    bool discapacidad;
-    public:
-    cliente(string _nombre,string _rut);
+    string tipo;
+
+public:
+    Cliente(int codigo, string& nombre, string& tipo);
+
+    int getCodigo();
     string getNombre();
-    string getRut();
-    void setNombre(string _nombre);
-    void setRut(string _rut);
-    ~cliente();
+    string getTipo();
+    void setCodigo(int codigo);
 };

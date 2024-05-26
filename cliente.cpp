@@ -1,21 +1,19 @@
-#include "cliente.h"
-#include <string>
+#include "Cliente.h"
 using namespace std;
+Cliente::Cliente(int codigo,string& nombre,string& tipo)
+    : codigo(codigo), nombre(nombre), tipo(tipo) {}
 
-cliente::cliente(string _nombre,string _rut){
-    this->nombre=_nombre;
-    this->rut=_rut;
+int Cliente::getCodigo() {
+    return codigo;
 }
-string cliente::getNombre(){
+
+string Cliente::getNombre() {
     return nombre;
 }
-string cliente::getRut(){
-    return rut;
+
+string Cliente::getTipo() {
+    return tipo;
 }
-void cliente::setNombre(string _nombre){
-    this->nombre=_nombre;
+void Cliente::setCodigo(int codigo) {
+    this -> codigo = codigo;
 }
-void cliente::setRut(string _rut){
-    this->rut=_rut;
-}
-cliente::~cliente(){}

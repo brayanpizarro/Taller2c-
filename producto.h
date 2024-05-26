@@ -1,25 +1,23 @@
 #pragma once
-#include <iostream>
 #include <string>
 using namespace std;
-class producto{
-    private:
+class Producto {
+private:
+    int codigo;
     string nombre;
-    string codigo;
-    int precio;
     string categoria;
     string subCategoria;
-    public:
-    producto(string nombre,string codigo,int precio,string categoria,string subCategoria);
-    string getNombre();
-    string getCodigo();
-    int getPrecio();
-    string getCategoria();
-    string getSubCategoria();
-    void setNombre(string _nombre);
-    void setCodigo(string _codigo);
-    void setPrecio(int precio);
-    void setCategoria(string _categoria);
-    void setSubCategoria(string _subCategoria);
-    ~producto();
+    float precio;
+    int stock;
+
+public:
+    Producto(int codig,string& nombre,string& categoria,string& subCategoria, float precio, int stock);
+
+    int getCodigo() ;
+    string getNombre() ;
+    string getCategoria() ;
+    string getSubCategoria() ;
+    float getPrecio() ;
+    int getStock() ;
+    void setStock(int newStock);
 };

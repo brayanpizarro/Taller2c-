@@ -1,28 +1,8 @@
-#include "clientePreferencial.h"
-#include <string>
+#include "ClientePreferencial.h"
 using namespace std;
+ClientePreferencial::ClientePreferencial(int id,string& nombre,string& tipo,string& tipoPreferencial)
+    : Cliente(id, nombre, tipo), tipoPreferencial(tipoPreferencial) {}
 
-clientePreferecial::clientePreferecial(string _nombre,string _rut,int _edad,bool _embarazo,bool _discapacidad):cliente(_nombre,_rut){
-this->edad=_edad;
-this->embarazo=_embarazo;
-this->discapacidad=_discapacidad;
+string ClientePreferencial::getTipoPreferencial() {
+    return tipoPreferencial;
 }
-int clientePreferecial::getEdad(){
-    return edad;
-}
-bool clientePreferecial::getEmbarazo(){
-    return embarazo;
-}
-bool clientePreferecial::getDiscapacidad(){
-    return discapacidad;
-}
-void clientePreferecial::setEdad(int _edad){
-    this->edad=_edad;
-}
-void clientePreferecial::setEmbarazo(bool _embarazo){
-    this->embarazo=_embarazo;
-}
-void clientePreferecial::setDiscapacidad(bool _discapacidad){
-    this->discapacidad=_discapacidad;
-}
-clientePreferecial::~clientePreferecial(){}

@@ -1,40 +1,32 @@
-#include "producto.h"
-#include <string>
-
+#include "Producto.h"
 using namespace std;
+Producto::Producto(int codigo,string& nombre,string& categoria,string& subCategoria, float precio, int stock)
+    : codigo(codigo), nombre(nombre), categoria(categoria), subCategoria(subCategoria), precio(precio), stock(stock) {}
 
-producto::producto(string _nombre,string _codigo,int _precio,string _categoria,string _subCategoria){
-    this->nombre=_nombre;
-    this->codigo=_codigo;
-    this->precio=_precio;
-    this->categoria=_categoria;
-    this->subCategoria=_subCategoria;
-}
-string producto::getNombre(){
-    return nombre;
-}
-string producto::getCodigo(){
+int Producto::getCodigo(){
     return codigo;
 }
-int producto::getPrecio(){
-    return precio;
+
+string Producto::getNombre(){
+    return nombre;
 }
-string producto::getCategoria(){
+
+string Producto::getCategoria()  {
     return categoria;
 }
-string producto::getSubCategoria(){
+
+string Producto::getSubCategoria()  {
     return subCategoria;
 }
-void producto::setNombre(string _nombre){
-    this->nombre=_nombre;
+
+float Producto::getPrecio()  {
+    return precio;
 }
-void producto::setCodigo(string _codigo){
-    this->codigo=_codigo;
+
+int Producto::getStock()  {
+    return stock;
 }
-void producto::setCategoria(string _categoria){
-    this->categoria=_categoria;
+
+void Producto::setStock(int newStock) {
+    stock = newStock;
 }
-void producto::setSubCategoria(string _subCategoria){
-    this->subCategoria=_subCategoria;
-}
-producto::~producto(){}
