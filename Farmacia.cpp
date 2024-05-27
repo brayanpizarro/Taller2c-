@@ -47,6 +47,7 @@ Boleta Farmacia::generarBoleta( Cliente& cliente,  vector<Producto>& productos) 
     int codigo = boletas.size() + 1;
     Boleta boleta(codigo, cliente, productos);
     boletas.push_back(boleta);
+    eliminarStock(productos);
     return boleta;
 }
 
@@ -103,4 +104,22 @@ void Farmacia::cargarDatos() {
     }
     productosFile.close();
     
+}
+void Farmacia::eliminarStock(vector<Producto>& listaCompra){
+    for (auto& productoCompra : listaCompra) {
+        for (auto& categoria : productos) {
+            auto& listaProductos = categoria.second;
+            for (auto it = listaProductos.begin(); it != listaProductos.end(); ++it) {
+                if (it->getCodigo() == productoCompra.getCodigo()) {
+                    int nuevaCantidad = it->getStock() - 1;
+                    if (nuevaCantidad <= 0) {
+                        listaProductos.erase(it);
+                    } else {
+                        it->setStock(nuevaCantidad);
+                    }
+                    break;
+                }
+            }
+        }
+    }
 }

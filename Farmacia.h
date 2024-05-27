@@ -19,6 +19,7 @@ class Farmacia{
         Producto buscarProducto(int codigo);
         void agregarCliente(Cliente& cliente);
         Cliente atenderCliente();
+        void eliminarStock(vector<Producto>& listaCompra);
         Boleta generarBoleta(Cliente& cliente,vector<Producto>& productos);
         void guardarDatos();
         void cargarDatos();

@@ -3,8 +3,8 @@
 9,Shampoo,Producto Cosmético,Higiene Personal,3000,60
 4,Vitamina C,Suplemento,Vitamínico,12290,250
 5,Calcio,Suplemento,Vitaminico,1220,100
-1,Paracetamol,Medicamento,Analgesico,1050,100
-2,Aspirina,Medicamento,Analgesico,4580,200
-3,Ibuprofeno,Medicamento,Antiinflamatorio,25000,150
+1,Paracetamol,Medicamento,Analgesico,1050,99
+2,Aspirina,Medicamento,Analgesico,4580,199
+3,Ibuprofeno,Medicamento,Antiinflamatorio,25000,149
 6,Insulina,Medicamento,Diabetes,2000,50
 7,Omeprazol,Medicamento,Estómago,1200,120

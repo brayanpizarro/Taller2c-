@@ -35,5 +35,6 @@ void Boleta::mostrarProductoBoleta(){
                       << "  -----  " << producto.getPrecio() 
                       << endl;
     }
+    cout<<"Total :"<<getTotal();
     cout << endl;
 }
