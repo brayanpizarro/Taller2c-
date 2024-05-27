@@ -1,5 +1,6 @@
 #include "Boleta.h"
-
+#include <iostream>
+#include "Producto.h"
 Boleta::Boleta(int codigo,Cliente& cliente,vector<Producto>& productos)
     : codigo(codigo), cliente(cliente), productos(productos) {
     total = calcularTotal();
@@ -13,7 +14,7 @@ Cliente Boleta::getCliente(){
     return cliente;
 }
 
-std::vector<Producto> Boleta::getProductos(){
+vector<Producto> Boleta::getProductos(){
     return productos;
 }
 
@@ -27,4 +28,12 @@ float Boleta::calcularTotal() {
         suma += producto.getPrecio();
     }
     return suma;
+}
+void Boleta::mostrarProductoBoleta(){
+    for(auto& producto : productos){
+        cout << " -- " << producto.getNombre() 
+                      << "  -----  " << producto.getPrecio() 
+                      << endl;
+    }
+    cout << endl;
 }

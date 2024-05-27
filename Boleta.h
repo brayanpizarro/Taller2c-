@@ -15,7 +15,8 @@ class Boleta{
     
     int getCodigo();
     Cliente getCliente();
-    std::vector<Producto> getProductos();
+    vector<Producto> getProductos();
+    void mostrarProductoBoleta();
     float getTotal();
     float calcularTotal();
 };
