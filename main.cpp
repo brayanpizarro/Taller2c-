@@ -92,8 +92,9 @@ int attendClient(Farmacia& farmacia){
                 cin>>codigo;
             }
             Boleta boleta = farmacia.generarBoleta(cliente, listaProductos);
-            cout << "Boleta generada para el cliente " << cliente.getNombre() << " con total: " << boleta.getTotal() << endl;
-            compra=false;
+            cout << " -------------- " << endl;
+            cout << "Boleta generada para el cliente --- " << cliente.getNombre() << endl;
+            boleta.mostrarProductoBoleta();
 
         } catch (const runtime_error& e) {
             cerr << e.what() << endl;

@@ -74,16 +74,6 @@ void Farmacia::guardarDatos() {
     }
     productosFile.close();
 
-// Guardar clientes
-    ofstream clientesFile("clientes.txt");
-    queue<Cliente> tempClientes = clientes;
-    while (!tempClientes.empty()) {
-        Cliente cliente = tempClientes.front();
-        tempClientes.pop();
-        clientesFile << cliente.getCodigo() << "," << cliente.getNombre() << "," << cliente.getTipo() << endl;
-    }
-    clientesFile.close();
-
  ofstream boletasFile("boletas.txt");
     for ( auto& boleta : boletas) {
         boletasFile << boleta.getCodigo() << "," << boleta.getCliente().getCodigo() << "," << boleta.getTotal() << endl;
